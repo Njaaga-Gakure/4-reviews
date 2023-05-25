@@ -22,9 +22,14 @@ const App = () => {
       return newIndex
     })
   }
+  const randomize = () => {
+    const randomIndex = Math.floor(Math.random() * reviews.length)
+    console.log(randomIndex)
+    setIndex(randomIndex)
+  }
   return (
     <section className="container">
-      <Review reviews={reviews} index={index} prev={prev} next={next} />
+      <Review reviews={reviews} index={index} prev={prev} next={next} randomize={randomize}/>
    </section>
   )
 };
